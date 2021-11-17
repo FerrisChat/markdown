@@ -69,3 +69,23 @@ Said text is usually pieces of code, hence the name "inline code".
 | -------------------- | ---------------- | ----------------------------- |
 |   \`example text\`   |  `example text`  | ``<code>example text</code>`` |
 | \`\`example text\`\` | ``example text`` | ``<code>example text</code>`` |
+
+#### Embedded Block Code (Code-blocks)
+Three backticks placed both before and after text will render the text as a block with a distinct background and a monospaced font.
+Said text is usually blocks of code, hence the name "code-block".
+
+##### Adding Syntax Highlighting
+Adding a valid syntax language code, followed by a newline right after the first 3 backticks with no space in-between will add syntax-highlighting to the code-block.
+
+For example, here we are adding syntax-highlighting to a Python code-block:
+\`\`\`py
+...\`\`\`
+
+Trailing newlines in the code-block will not be rendered.
+
+|          Raw         |       Rich       |              HTML             |
+| -------------------- | ---------------- | ----------------------------- |
+| \`\`\`<br>example text<br>\`\`\` |  ```example text```  | ``<pre><code>example text</code></pre>`` |
+| \`\`\`py<br>print('Hello, world!')<br>\`\`\` | ```py
+print('Hello, world!')
+``` | ``<pre data-language="py"><code>...</code></pre>`` |
